@@ -20,7 +20,7 @@ function useDB(room) {
     }
     useEffect(() => {
         store.collection(coll)
-        // .where('room','==',room)
+        .where('room','==',room)
         .onSnapshot(snap=> snap.docChanges().forEach(c=> {
             const {doc, type} = c
             if (type==='added') add({...doc.data(),id:doc.id})

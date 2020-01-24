@@ -17,8 +17,8 @@ function App(){
 function Room(props) {
   const {room} = props.match.params
   // const [messages, setMessages]= useState([])
-  const [name, setName] = useState('Brent')
-  const messages = useDB()
+  const [name, setName] = useState('')
+  const messages = useDB(room)
   
 
   console.log(messages)
@@ -39,6 +39,7 @@ function Room(props) {
           from={m.name===name?'me':'you'}>
           <div className="msg-name">{m.name}</div>
           <div className="message">
+            {/* <div className="msg-name">{m.name}</div> */}
             <div className="msg-text">{m.text}</div>
           </div>
         </div>
@@ -47,7 +48,7 @@ function Room(props) {
 
     <TextInput onSend={(text)=> {
       db.send({
-        text, name, ts: new Date()
+        text, name, ts: new Date(), room
       })
     }}/>
 

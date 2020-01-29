@@ -84,7 +84,7 @@ function TextInput(props){
   return <div className="text-input">
     <div className="camera-wrapper">
       <button className="camera" onClick={props.showCamera}>
-          <FiCamera style={{ }}></FiCamera>
+          <FiCamera style={{height:15, width:15}}></FiCamera>
       </button>
       <input className="special"value={text} 
         placeholder="Message..."

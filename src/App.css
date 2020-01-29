@@ -4,6 +4,8 @@
 }
 html{
   height:100%;
+  position: fixed;
+  top:0; left:0; bottom:0; right:0;
 }
 body{
   font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -20,11 +22,12 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  height: 34px;
+  height: 3rem ;
   border-bottom: 1px solid white;
   color: #19547b;
   padding: 0px 10px;
   background: rgba(255,255,255,.5);
+  font-size: 1.5rem;
 
   display: flex; 
   align-items: center;
@@ -43,7 +46,7 @@ header{
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 3rem;
   border-top: 1px solid white;
   background: rgba(255,255,255,0.2);
 }
@@ -51,7 +54,7 @@ header{
 button{
   position: absolute;
   right:5px;
-  top: 7px;
+  top: .7rem;
   height: 25px;
   width: 25px;
   background: #107DFF;
@@ -76,7 +79,7 @@ button:disabled{
 
 input{
   position: absolute;
-  top: 4px;
+  top: .5rem;
   right: 0px;
   outline: none;
   width:60%;
@@ -101,7 +104,7 @@ input.special:focus{
 }
 
 .messages{
-  height: calc(100vh - 80px);
+  height: calc(100vh - 6rem);
   width: 100vw;
   padding-right: 2%;
   padding-left: 2%;
@@ -152,7 +155,7 @@ input.special:focus{
   outline:none;
   border-radius: 4px;
   position: absolute;
-  top: 4px;
+  top: .6rem;
 }
 
 .name-button:hover{
@@ -208,4 +211,15 @@ input.special:focus{
   color: black;
   position: absolute;
   top: -9px;
+}
+
+.camera{
+  position: absolute; 
+  left: 1%;
+  top: .6rem;
+}
+
+.camera-wrapper{
+  display: block;
+  width: 100%;
 }

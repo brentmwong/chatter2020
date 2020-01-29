@@ -93,7 +93,10 @@ input.special:focus{
   transition: ease-in .2s;
 }
 
-i {
+.send {
+  position: absolute;
+  top: 5px;
+  right: 5px;
   font-size: 16px;
 }
 
@@ -117,7 +120,7 @@ i {
   position: relative;
 }
 
-.message{
+.message[from='me']{
   color: white;
   background: rgb(0, 110, 255);
   margin: 5px 0px 20px 0px;
@@ -125,9 +128,9 @@ i {
   padding: 7px 12px;
 }
 
-.message[from='me']{
-  color: rgb(24, 24, 24);
-  background: white;
+.message{
+  color: rgb(0, 0, 0);
+  background: rgb(235, 235, 235);
   margin: 5px 0px 20px 0px;
   border-radius: 12px;
   padding: 7px 12px;
@@ -188,8 +191,13 @@ i {
   margin-right: 30px;
 }
 
-.msg-text{
+.msg-text[from='me']{
   color: white;
+  display: inline-block;
+}
+
+.msg-text{
+  color: rgb(24, 24, 24);
   display: inline-block;
 }
 

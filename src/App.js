@@ -3,6 +3,7 @@ import './App.css'
 import {db, useDB} from './db'
 import NamePicker from './namepicker'
 import { BrowserRouter, Route } from 'react-router-dom'
+import { IoIosSend } from 'react-icons/io';
 
 function App(){
   useEffect(()=>{
@@ -38,9 +39,8 @@ function Room(props) {
         return <div key={i} className="message-wrap"
           from={m.name===name?'me':'you'}>
           <div className="msg-name">{m.name}</div>
-          <div className="message">
-            {/* <div className="msg-name">{m.name}</div> */}
-            <div className="msg-text">{m.text}</div>
+          <div className="message" from={m.name===name?'me':'you'}>
+            <div className="msg-text" from={m.name===name?'me':'you'}>{m.text}</div>
           </div>
         </div>
       })}
@@ -75,7 +75,7 @@ function TextInput(props){
       setText('')
     }} className = "button"
       disabled={!text}>
-      <i className='fas fa-angle-right'></i>
+      <i className='send'><IoIosSend/></i>
     </button>
   </div>
 }
